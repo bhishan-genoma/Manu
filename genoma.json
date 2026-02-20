@@ -1,0 +1,310 @@
+{
+  "meta": {
+    "id": null,
+    "name": "demo01",
+    "version": "v0.1",
+    "graph": {
+      "nodes": {
+        "sys_input": {
+          "id": "sys_input",
+          "type": "sys_input",
+          "label": "Input Data",
+          "x": 100,
+          "y": 300,
+          "width": 200,
+          "height": 100,
+          "data": {
+            "datasetId": "b46a4f6313c67a81a48bc467e51d6494"
+          },
+          "status": "idle"
+        },
+        "sys_output": {
+          "id": "sys_output",
+          "type": "sys_output",
+          "label": "Model Output",
+          "x": 800,
+          "y": 300,
+          "width": 200,
+          "height": 100,
+          "data": {
+            "result": null
+          },
+          "status": "idle"
+        }
+      },
+      "edges": {
+        "3712aec3-e049-410c-a953-87b5d523f300": {
+          "id": "3712aec3-e049-410c-a953-87b5d523f300",
+          "source": "sys_input",
+          "target": "sys_output"
+        }
+      }
+    },
+    "assets": [
+      {
+        "asset_id": "b46a4f6313c67a81a48bc467e51d6494",
+        "public_id": "datasets/bpy6zn7bwpxisc2taz5p.csv",
+        "version": 1771475531,
+        "version_id": "10ffb97e63c8eb7a59470f5b4854c9d3",
+        "signature": "1e0a8fe5d7e9c16e8983be9ddb33a4bdea355e30",
+        "resource_type": "raw",
+        "created_at": "2026-02-19T04:32:11Z",
+        "tags": [],
+        "bytes": 85,
+        "type": "upload",
+        "etag": "e2f678a8110e421f16a3470cdef45653",
+        "placeholder": false,
+        "url": "http://res.cloudinary.com/dzv6h6i9y/raw/upload/v1771475531/datasets/bpy6zn7bwpxisc2taz5p.csv",
+        "secure_url": "https://res.cloudinary.com/dzv6h6i9y/raw/upload/v1771475531/datasets/bpy6zn7bwpxisc2taz5p.csv",
+        "asset_folder": "datasets",
+        "display_name": "bpy6zn7bwpxisc2taz5p.csv",
+        "original_filename": "Untitled spreadsheet - Sheet1",
+        "api_key": "442759937461193"
+      }
+    ],
+    "datasets": [],
+    "readme": "",
+    "meta": {
+      "id": null,
+      "name": "qwerty",
+      "version": "v0.1",
+      "graph": {
+        "nodes": {
+          "sys_input": {
+            "id": "sys_input",
+            "type": "sys_input",
+            "label": "Input Data",
+            "x": 100,
+            "y": 300,
+            "width": 200,
+            "height": 100,
+            "data": {
+              "datasetId": null
+            },
+            "status": "success",
+            "errorMsg": null
+          },
+          "sys_output": {
+            "id": "sys_output",
+            "type": "sys_output",
+            "label": "Model Output",
+            "x": 1013,
+            "y": 242,
+            "width": 200,
+            "height": 100,
+            "data": {
+              "result": null
+            },
+            "status": "success",
+            "errorMsg": null
+          },
+          "0498a983-7ad2-49b9-bf0f-a50632d02c60": {
+            "id": "0498a983-7ad2-49b9-bf0f-a50632d02c60",
+            "type": "data cleaning",
+            "label": "Handle Missing Values Drop",
+            "x": 270,
+            "y": 142,
+            "width": 160,
+            "height": 80,
+            "inputs": [],
+            "outputs": [],
+            "data": {
+              "description": "Drop rows with missing values"
+            },
+            "status": "success",
+            "errorMsg": null
+          },
+          "0c536199-a02f-42e8-862a-66fffcd7a601": {
+            "id": "0c536199-a02f-42e8-862a-66fffcd7a601",
+            "type": "data cleaning",
+            "label": "Handle Missing Values Fill",
+            "x": 608,
+            "y": 136,
+            "width": 160,
+            "height": 80,
+            "inputs": [],
+            "outputs": [],
+            "data": {
+              "description": "Fill missing values with mean/median/mode"
+            },
+            "status": "success",
+            "errorMsg": null
+          },
+          "a6dcb449-4257-4007-92c0-46e0627c4e0e": {
+            "id": "a6dcb449-4257-4007-92c0-46e0627c4e0e",
+            "type": "data cleaning",
+            "label": "Handle Missing With Imputer",
+            "x": 859,
+            "y": 140,
+            "width": 160,
+            "height": 80,
+            "inputs": [],
+            "outputs": [],
+            "data": {
+              "description": "Advanced missing value imputation using SimpleImputer"
+            },
+            "status": "success",
+            "errorMsg": null
+          }
+        },
+        "edges": {
+          "acda8fe9-447f-423e-9ed3-175bc1b319bb": {
+            "id": "acda8fe9-447f-423e-9ed3-175bc1b319bb",
+            "source": "sys_input",
+            "target": "0498a983-7ad2-49b9-bf0f-a50632d02c60"
+          },
+          "0aa1a84a-aa29-42cc-b6b5-9e0abd51f40e": {
+            "id": "0aa1a84a-aa29-42cc-b6b5-9e0abd51f40e",
+            "source": "0498a983-7ad2-49b9-bf0f-a50632d02c60",
+            "target": "0c536199-a02f-42e8-862a-66fffcd7a601"
+          },
+          "d869f008-c75b-4bf1-b61a-9fe94df342cd": {
+            "id": "d869f008-c75b-4bf1-b61a-9fe94df342cd",
+            "source": "0c536199-a02f-42e8-862a-66fffcd7a601",
+            "target": "a6dcb449-4257-4007-92c0-46e0627c4e0e"
+          },
+          "612d9987-08c8-429f-be92-eb3bcffb251a": {
+            "id": "612d9987-08c8-429f-be92-eb3bcffb251a",
+            "source": "a6dcb449-4257-4007-92c0-46e0627c4e0e",
+            "target": "sys_output"
+          }
+        }
+      },
+      "assets": [],
+      "datasets": [],
+      "readme": "",
+      "meta": {
+        "id": null,
+        "name": "Untitled Model",
+        "version": "v0.1",
+        "graph": null,
+        "assets": [],
+        "datasets": [],
+        "readme": "",
+        "meta": {},
+        "lastSaved": "2026-02-17T09:41:13.860Z"
+      },
+      "lastSaved": "2026-02-19T04:50:38.061Z"
+    },
+    "lastSaved": "2026-02-20T11:50:10.182Z"
+  },
+  "graph": {
+    "nodes": {
+      "sys_input": {
+        "id": "sys_input",
+        "type": "sys_input",
+        "label": "Input Data",
+        "x": 100,
+        "y": 300,
+        "width": 200,
+        "height": 100,
+        "data": {
+          "datasetId": null
+        },
+        "status": "idle"
+      },
+      "sys_output": {
+        "id": "sys_output",
+        "type": "sys_output",
+        "label": "Model Output",
+        "x": 1193.0264391586893,
+        "y": 434.4514969694058,
+        "width": 200,
+        "height": 100,
+        "data": {
+          "result": null
+        },
+        "status": "idle"
+      },
+      "f41dbe00-537f-49ab-9cff-3b1cabe5ab0f": {
+        "id": "f41dbe00-537f-49ab-9cff-3b1cabe5ab0f",
+        "type": "data cleaning",
+        "label": "Handle Missing Values Drop",
+        "x": 364,
+        "y": 243,
+        "width": 210,
+        "height": 80,
+        "inputs": [],
+        "outputs": [],
+        "data": {
+          "description": "Drop rows with missing values"
+        },
+        "status": "idle"
+      },
+      "9cad4471-2c15-4648-8518-ee1d622c2767": {
+        "id": "9cad4471-2c15-4648-8518-ee1d622c2767",
+        "type": "data cleaning",
+        "label": "Handle Missing With Imputer",
+        "x": 640,
+        "y": 217,
+        "width": 217,
+        "height": 88,
+        "inputs": [],
+        "outputs": [],
+        "data": {
+          "description": "Advanced missing value imputation using SimpleImputer"
+        },
+        "status": "idle"
+      },
+      "f639a925-42ac-4448-a322-f0429eeb7622": {
+        "id": "f639a925-42ac-4448-a322-f0429eeb7622",
+        "type": "scaling",
+        "label": "Standardization",
+        "x": 954.604053379539,
+        "y": 383.41621351815644,
+        "width": 160,
+        "height": 112,
+        "inputs": [],
+        "outputs": [],
+        "data": {
+          "description": "Standardization (Z-score normalization): mean=0, std=1"
+        },
+        "status": "idle"
+      }
+    },
+    "edges": {
+      "a6c5e5b4-627f-4de7-8369-f985ec8ecaac": {
+        "id": "a6c5e5b4-627f-4de7-8369-f985ec8ecaac",
+        "source": "f639a925-42ac-4448-a322-f0429eeb7622",
+        "target": "sys_output"
+      },
+      "e37e1fa2-9f77-4641-b23d-590e03028289": {
+        "id": "e37e1fa2-9f77-4641-b23d-590e03028289",
+        "source": "9cad4471-2c15-4648-8518-ee1d622c2767",
+        "target": "f639a925-42ac-4448-a322-f0429eeb7622"
+      },
+      "dad8cc6f-0b5f-4f38-83d7-c6bcd9dc5d4e": {
+        "id": "dad8cc6f-0b5f-4f38-83d7-c6bcd9dc5d4e",
+        "source": "f41dbe00-537f-49ab-9cff-3b1cabe5ab0f",
+        "target": "9cad4471-2c15-4648-8518-ee1d622c2767"
+      },
+      "9768b2e6-acc4-4afc-aca0-8b867164a49f": {
+        "id": "9768b2e6-acc4-4afc-aca0-8b867164a49f",
+        "source": "sys_input",
+        "target": "f41dbe00-537f-49ab-9cff-3b1cabe5ab0f"
+      }
+    }
+  },
+  "assets": [
+    {
+      "asset_id": "de8ae0c28190f5fb8d65b6dd0aa230fe",
+      "public_id": "datasets/d9hkxvqtnqnfmxt6zhug.csv",
+      "version": 1771581849,
+      "version_id": "58d2518e3d697ebdd879eb3b5872b1b4",
+      "signature": "8247ddb7f5ed9e5f2b49003a20949aa3d537007e",
+      "resource_type": "raw",
+      "created_at": "2026-02-20T10:04:09Z",
+      "tags": [],
+      "bytes": 85,
+      "type": "upload",
+      "etag": "e2f678a8110e421f16a3470cdef45653",
+      "placeholder": false,
+      "url": "http://res.cloudinary.com/dzv6h6i9y/raw/upload/v1771581849/datasets/d9hkxvqtnqnfmxt6zhug.csv",
+      "secure_url": "https://res.cloudinary.com/dzv6h6i9y/raw/upload/v1771581849/datasets/d9hkxvqtnqnfmxt6zhug.csv",
+      "asset_folder": "datasets",
+      "display_name": "d9hkxvqtnqnfmxt6zhug.csv",
+      "original_filename": "Untitled spreadsheet - Sheet1",
+      "api_key": "442759937461193"
+    }
+  ]
+}
